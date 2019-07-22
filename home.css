@@ -2,25 +2,68 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    display: inline;
     background-color: #333;
   }
   
-  li {
-    float: left;
+  ul li {
+    display: inline-block;
+    position: relative;
   }
   
-  li a {
+  ul li a {
     display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
   }
-  li a:hover {
+  ul li :hover{
     background-color: #111;
+  }
+  ul li ul{
+      padding: 0;
+      position: absolute;
+      left: 0;
+      width: 250px;
+      display: none;
+      visibility: hidden;
+  }
+
+  ul li ul li{
+      background: #333;
+      display: block;
+  }
+
+  ul li ul li{
+      background: #333;
+  }
+  ul li:hover ul{
+      display: block;
+      opacity: 1;
+      visibility: visible;
+  }
+
+  ul ul li:hover li{
+      display: block;
   }
 
   body {
-      background-image: "./home.jpg";
-  }
+      margin: 0;
+      background-image: url("home.jpg");
+      }
+.navbar {
+    width: 100%;
+    background: #333;
+}
+
+.time {
+    text-align: center;
+    color: white;
+    font-size: 100px;
+}
+.container{
+    width: 100%;
+    min-width: 500px;
+    margin: auto;
+}

@@ -7,13 +7,23 @@
 <script type="text/javascript" src="dateandtime.js"></script>
 </head>
 <body>
-	<ul>
-		<li><a class="active" href="index.html">Home</a></li>
-		<li><a href="">Projects</a></li>
-		<li><a href="">Resume</a></li>
-		<li><a href="">About</a></li>
-	  </ul>
+	<div class="container">
+		<div class="navbar">
+			<ul>
+				<li><a href = "index.html">Home</a></li>
+				<li><a href="#">Projects</a>
+					<ul>
+						<li><a href="#">Websites</a></li>
+						<li><a href="#">Python Games</a></li>
+						<li><a href="#">Mobile App</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Resume</a></li>
+			</ul>
+		</div>
+	</div>
 	<span id="date_time"></span>
-    <script type="text/javascript">window.onload = date_time('date_time');</script>
+	<script class="time" type="text/javascript">window.onload = date_time('date_time');</script>
+	<h2 class="time">Welcome</h2>
 </body>
 </html>

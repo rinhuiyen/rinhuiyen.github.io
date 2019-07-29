@@ -9,6 +9,7 @@ ul {
   ul li {
     display: inline-block;
     position: relative;
+    font-size: 20px;
   }
   
   ul li a {
@@ -50,8 +51,12 @@ ul {
 
   body {
       margin: 0;
-      background-image: url("home.jpg");
       }
+
+.title{
+    background-image: url("blur-background.jpg");
+}
+
 .navbar {
     width: 100%;
     background: #333;
@@ -59,8 +64,28 @@ ul {
 
 .time {
     text-align: center;
-    color: white;
     font-size: 100px;
+    color: #FF8C00;
+    margin-bottom: 0;
+}
+
+.bio {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.objective{
+    text-align: center;
+    font-size: 20px;
+    margin-top: 0;
+    border-top: 4px solid #FF8C00;
+    border-bottom: 4px solid #FF8C00;
+}
+.profile{
+    margin-top: 10px;
+    height: 200px;
+    border-radius: 50%;
 }
 .container{
     width: 100%;

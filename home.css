@@ -1,15 +1,21 @@
+.navbar {
+    width: 100%;
+    background: #333;
+}
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: inline;
     background-color: #333;
+    z-index: 4;
   }
   
   ul li {
     display: inline-block;
     position: relative;
     font-size: 20px;
+    z-index: 4;
   }
   
   ul li a {
@@ -18,9 +24,11 @@ ul {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    z-index: 4;
   }
   ul li :hover{
     background-color: #111;
+    z-index: 4;
   }
   ul li ul{
       padding: 0;
@@ -29,25 +37,27 @@ ul {
       width: 250px;
       display: none;
       visibility: hidden;
+      z-index: 4;
   }
 
   ul li ul li{
       background: #333;
       display: block;
+      z-index: 4;
   }
 
-  ul li ul li{
-      background: #333;
-  }
   ul li:hover ul{
       display: block;
       opacity: 1;
       visibility: visible;
+      z-index: 4;
   }
 
   ul ul li:hover li{
       display: block;
+      z-index: 4;
   }
+
 
   body {
       margin: 0;
@@ -59,10 +69,6 @@ ul {
     border-bottom: 4px solid #FF8C00;
 }
 
-.navbar {
-    width: 100%;
-    background: #333;
-}
 
 .time {
     margin-top:0;
@@ -106,4 +112,77 @@ ul {
     width: 100%;
     min-width: 500px;
     margin: auto;
+}
+.ml2 {
+    font-weight: 900;
+    font-size: 3.5em;
+  }
+  
+  .ml2 .letter {
+    display: inline-block;
+    line-height: 1em;
+  }
+  .ml3 {
+    font-weight: 900;
+    font-size: 3.5em;
+  }
+  
+  .ml3 .letter {
+    display: inline-block;
+    line-height: 1em;
+  }
+
+  .open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 200px;
+}
+
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  opacity: 0.9;
+  filter: alpha(opacity=60);
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: #555;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
 }

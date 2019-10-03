@@ -24,6 +24,15 @@
                     <li><a href="#">Contact</a></li>
                 </ul>
             </div>
+
+            <button class="open-button" onclick="openForm()">Contact</button>
+			<div class="chat-popup" id="myForm">
+					<form action="/action_page.php" class="form-container">
+					  <h1>Contact me here: </h1>
+					  <h4>Email: <span class="glyphicon glyphicon-envelope"></span> gwenhuiyen@gmail.com</h4>
+					  <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+					</form>
+			</div>
     <div class="content">
         <div class="content-box">
             <h2>Python Game</h2>
@@ -74,6 +83,14 @@
             </div>
         </div>
 
-
+<script>
+                function openForm() {
+                  document.getElementById("myForm").style.display = "block";
+                }
+                
+                function closeForm() {
+                  document.getElementById("myForm").style.display = "none";
+                }
+</script>
 </body>
 </html>

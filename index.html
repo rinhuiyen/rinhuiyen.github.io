@@ -5,28 +5,38 @@
 		href = "home.css" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <head>
-<script type="text/javascript" src="dateandtime.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 </head>
 <body>
-	<div class="container">
 		<div class="navbar">
-			<ul>
-				<li><a href = "index.html">Home</a></li>
-				<li><a href="#">Projects</a>
-					<ul>
-						<li><a href="Websites.html">Websites</a></li>
-						<li><a href="Python.html">Python Games</a></li>
-						<li><a href="#">Mobile App</a></li>
-					</ul>
-				</li>
-				<li><a href="#">Contact</a></li>
-			</ul>
-		</div>
+				<ul>
+					<li><a href = "index.html">Home</a></li>
+					<li><a href="#">Projects</a>
+						<ul>
+							<li><a href="Websites.html">Websites</a></li>
+							<li><a href="Python.html">Python Games</a></li>
+							<li><a href="#">Mobile App</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</div>
+	<div class="container">
+			<button class="open-button" onclick="openForm()">Contact</button>
+			<div class="chat-popup" id="myForm">
+					<form action="/action_page.php" class="form-container">
+					  <h1>Contact me here: </h1>
+					  <h4>Email: <span class="glyphicon glyphicon-envelope"></span> gwenhuiyen@gmail.com</h4>
+					  <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+					</form>
+			</div>
 		<div class="title">
 			<!--<span id="date_time"></span>
 			<script class="time" type="text/javascript">window.onload = date_time('date_time');</script>-->
-			<h2 class="time">Lum Hui Yen</h2>
-			<h3 class="bio">Software Engineer</h3>
+			<h1 class="ml2">Hi, I am Lum Hui Yen</h1>
+			<h3 class="ml3">Software Engineer</h3>
 		</div>
 		<div class="objective">
 			<img src="profilepic.jpg" class="profile">
@@ -39,11 +49,56 @@
 			<h3 class="bio">Programming Skills</h3>
 			<p class="skills">HTML,Java,SQL,Python,ReactNative</p>
 		</div>
-		<div>
+		<!-- <div>
 			<h3 class="bio">Socials</h3>
 			<a href="#" class="fa fa-facebook"></a>
-		</div>
+		</div> -->
 	</div>
-	
+	<script>
+		function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+		var textWrapper = document.querySelector('.ml2');
+		textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+		
+		anime.timeline({loop: true})
+		  .add({
+			targets: '.ml2 .letter',
+			scale: [4,1],
+			opacity: [0,1],
+			translateZ: 0,
+			easing: "easeOutExpo",
+			duration: 950,
+			delay: (el, i) => 70*i
+		  }).add({
+			targets: '.ml2',
+			opacity: 0,
+			duration: 1000,
+			easing: "easeOutExpo",
+			delay: 1000
+		  });
+		  var textWrapper = document.querySelector('.ml3');
+		textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+		
+		anime.timeline({loop: true})
+		  .add({
+			targets: '.ml3 .letter',
+			scale: [4,1],
+			opacity: [0,1],
+			translateZ: 0,
+			easing: "easeOutExpo",
+			duration: 950,
+			delay: (el, i) => 70*i
+		  }).add({
+			targets: '.ml3',
+			opacity: 0,
+			duration: 1000,
+			easing: "easeOutExpo",
+			delay: 1000
+		  });</script>
 </body>
 </html>
